@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  nexus:
+    container_name: nexus
+    build: .
+    image: nexus:3.39.0-01
+    ports:
+      - "8081:8081"
+      - "8123:8123"
+    volumes:
+#      - /d01/volumes/nexus:/usr/local/nexus-3.39.0-01
+      - /d01/volumes/nexus-work:/sonatype-work/
