@@ -13,5 +13,5 @@ RUN groupadd -g 777 nexus &&\
     ln -s nexus--3.39.0-01 nexus / && \
     chown -R nexus:nexus ./nexus-3.39.0-01 && \
     chown -R nexus:nexus ./sonatype-work/
-
+USER nexus
 CMD /usr/local/nexus-3.39.0-01/bin/nexus run 1>&- 2>&-
